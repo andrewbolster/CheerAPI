@@ -1,7 +1,7 @@
 from flask import Flask
 app = Flask(__name__)
 
-cheerfile = '/dev/shm/cheer.txt'
+cheerfile = "/dev/shm/cheer.txt"
 
 @app.route('/')
 def read_cheer():
@@ -17,7 +17,7 @@ def read_cheer():
 def write_cheer(cheer):
     if cheer < 1000:
         cheer = "%.3d"%(cheer)
-        f = open(cheerfile,'w')
+        f = open(cheerfile,'w+')
         f.seek(0)
         f.write(cheer)
         f.truncate()
