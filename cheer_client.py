@@ -10,8 +10,7 @@ import urllib
 
 # Setup Params
 cheerHost = "http://unit1.farsetlabs.org.uk"
-cheerHost = "http://iris:5000"
-cheerPath = "/"
+cheerPath = "/cheerapi/"
 colourMap = {"red":"200",
              "green":"020",
              "blue":"002",
@@ -24,7 +23,7 @@ colourMap = {"red":"200",
              "orange":"210"}
 
 def set_borg(colour):
-    """ 
+    """
     This accepts either a string of the name of a colour, or the 3-digit RGB tuple within [0,2]
     If the input colour is valid, the LEDborg value will be updated, otherwise, an appropriate error will be printed and a "None" value returned
     """
